@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Maza', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #343A3F;
+  text-rendering: optimizeSpeed;
+  background-color: #FFFFFF;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #343A3F;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: #4888FF;
+  }
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.header {
+  &__item_top {
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #F4F4F4;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 40px;
+    margin: 0 auto;
+
+    &_left,
+    &_center,
+    &_right {
+      display: flex;
+      width: 33%;
+    }
+
+    &_left {
+      gap: 12px;
+    }
+
+    &_center {
+      justify-content: center;
+      gap: 12px;
+    }
+
+    &_right {
+      justify-content: flex-end;
+      gap: 16px;
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &::before {
+      content: url('../img/location.svg');
+      height: 16px;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: url('../img/phone.svg');
+      height: 16px;
+    }
+  }
+}
