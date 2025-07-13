@@ -126,6 +126,15 @@ select {
       height: 16px;
     }
   }
+
+  @media (max-width: 1100px) {
+    padding: 4px 0;
+
+    &__container_left {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
 }
 
 .container {
@@ -133,6 +142,10 @@ select {
   max-width: 1440px;
   padding: 0 40px;
   margin: 0 auto;
+
+  @media (max-width: 1100px) {
+    padding: 0 15px;
+  }
 }
 
 .header {
@@ -144,6 +157,7 @@ select {
   &__container {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
   }
 
   &__item {
@@ -189,6 +203,35 @@ select {
       background-color: @primary-color;
     }
   }
+
+  @media (max-width: 1100px) {
+    padding: 10px 0;
+
+    &__language {
+      margin-top: 0;
+    }
+
+    &__logo {
+      order: 2;
+      width: 56px;
+      height: 56px;
+    }
+
+    &__item {
+      &_top {
+        gap: 6px;
+      }
+
+      &_right {
+        order: 3;
+      }
+    }
+    
+    &__container {
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .burger {
@@ -209,13 +252,26 @@ select {
       width: 24px;
     }
   }
+
+  @media (max-width: 1100px) {
+    height: 40px;
+    padding: 12px 8px;
+
+    &__line {
+      width: 22px;
+
+      &:nth-child(2) {
+        width: 15px;
+      }
+    }
+  }
 }
 
 .search {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-basis: 100%;
+  flex-basis: 654px;
   margin-right: 8px;
   padding: 4px;
   border: 1px solid rgba(72, 136, 255, 0.2);
@@ -236,6 +292,24 @@ select {
     border: 0;
     border-radius: 8px;
     background-color: @primary-color;
+  }
+
+  @media (max-width: 1100px) {
+    order: 4;
+    margin-right: 0;
+
+    &__input {
+      padding-left: 12px;
+      font-size: 14px;
+    }
+
+    &__button {
+      width: 40px;
+      height: 40px;
+      background-image: url('../img/search.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }
 
@@ -298,6 +372,17 @@ select {
 
     &:hover svg path {
       fill: @primary-color;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    gap: 6px;
+
+    &__item {
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      text-align: center;
     }
   }
 }
